@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var degreeRange = document.getElementById("degree-range");
   var degreeNumber = document.getElementById("degree-number");
   var resetButton = document.getElementById("reset-button");
-  var imgReplaceButton = document.getElementById("img-replace-button");
 
   // Get current rotation (runs every time extension icon is clicked)
   chrome.tabs.getSelected(null, function (tab) {
@@ -24,16 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
         code: "var degree = " + degree + ";",
       },
       function () {
-        chrome.tabs.executeScript(null, { file: "scripts/transform_style.js" });
+        chrome.tabs.executeScript(null, { file: "contentScript.bundle.js" });
       }
     );
   }
 
-  function replaceImagesWithKittens() {
-    chrome.tabs.executeScript(null, {
-      file: "scripts/img_replace.js",
-    });
-  }
 
   function verifyRange(degree) {
     return degree && !isNaN(degree) && -180 <= degree && degree <= 180;
@@ -83,9 +77,5 @@ document.addEventListener("DOMContentLoaded", function () {
     degreeRange.value = 0;
     degreeNumber.value = 0;
     rotateElement(0);
-  });
-
-  imgReplaceButton.addEventListener("click", function () {
-    replaceImagesWithKittens();
   });
 });

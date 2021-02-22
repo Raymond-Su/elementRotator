@@ -1,5 +1,4 @@
 var webpack = require("webpack"),
-  fs = require("fs-extra"),
   CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin,
   config = require("../webpack.config");
 
@@ -8,9 +7,10 @@ config.plugins = [
   new CleanWebpackPlugin(),
 ].concat(config.plugins);
 
-webpack(config, function (err) {
+webpack(config, function(err) {
   if (err) throw err;
 });
 
-fs.copySync("./public", "./build", { overwrite: true });
-console.log("Build Suceeded");
+
+
+
