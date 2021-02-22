@@ -1,6 +1,7 @@
 {
-  "name": "Chrome Extension Webpack",
-  "options_page": "options.html",
+  "name": "pageRotate",
+  "description": "A chrome extension that rotates the current page",
+  "version": "0.0.1",
   "background": {
     "page": "background.html"
   },
