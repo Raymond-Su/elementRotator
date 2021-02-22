@@ -1,0 +1,53 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+html,
+body {
+  width: 400px;
+}
+.full-pad {
+  padding: 15px;
+}
+.input-button {
+  width: 100%;
+}
+.input-number {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background-color: #eee;
+  padding-left: 2px;
+}
+.input-number:focus {
+  outline: none;
+}
+.no-pad {
+  padding: 0;
+}
+.only-top-pad {
+  padding: 15px 0 0 0;
+}
+.only-right-pad {
+  padding: 0 15px 0 0;
+}
+.only-bottom-pad {
+  padding: 0 0 15px 0;
+}
+.only-left-pad {
+  padding: 0 0 0 15px;
+}
+.row {
+  margin-bottom: 15px;
+}
+#degree-range {
+  width: 100%;
+}

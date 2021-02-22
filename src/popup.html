@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title></title>
+    <title>Rotation Tool</title>
+    <script src="./js/popup.js"></script>
+    <link rel="stylesheet" href="css/popup.css" />
   </head>
   <body>
-    <h1>Hello!</h1>
-    <img src="img/icon-128.png" />
+    <div class="container full-pad">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Page Rotator</h3>
+        </div>
+        <div class="col-xs-12">
+          <input id="degree-range" type="range" value="0" min="-180" max="180" />
+        </div>
+        <div class="col-xs-4 only-left-pad">
+          <label for="degree-number">Rotation degree:</label>
+        </div>
+        <div class="col-xs-4 no-pad">
+          <input class="input-number" id="degree-number" type="number" value="0" min="-180" max="180" />
+        </div>
+        <div class="col-xs-4 only-right-pad">
+          <button class="input-button" id="reset-button">Reset</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Random Fun Stuff</h3>
+        </div>
+        <div class="col-xs-12">
+          <button class="input-button" id="img-replace-button">Replace all images with kittens</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

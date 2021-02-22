@@ -12,4 +12,5 @@ webpack(config, function (err) {
   if (err) throw err;
 });
 
-fs.copySync("./public", "./build");
+fs.copySync("./public", "./build", { overwrite: true });
+console.log("Build Suceeded");
