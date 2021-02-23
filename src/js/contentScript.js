@@ -1,4 +1,4 @@
-chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   switch (request.action) {
     case "getRotation": {
       var str = document.body.style.transform;
@@ -20,4 +20,5 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
       document.body.style.OTransform = 'rotate('+degree+'deg)';
     }
   }
+  return true
 });
