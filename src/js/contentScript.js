@@ -1,3 +1,11 @@
+function rotate(htmlElement, degree) {
+  htmlElement.style.transform = 'rotate('+degree+'deg)';
+  htmlElement.style.msTransform = 'rotate('+degree+'deg)';
+  htmlElement.style.MozTransform = 'rotate('+degree+'deg)';
+  htmlElement.style.WebkitTransform = 'rotate('+degree+'deg)';
+  htmlElement.style.OTransform = 'rotate('+degree+'deg)';
+}
+
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   switch (request.action) {
     case "getRotation": {
@@ -10,14 +18,25 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       }
       break;
     }
-     
     case "setRotation": {
-      const degree = request.degree;
-      document.body.style.transform = 'rotate('+degree+'deg)';
-      document.body.style.msTransform = 'rotate('+degree+'deg)';
-      document.body.style.MozTransform = 'rotate('+degree+'deg)';
-      document.body.style.WebkitTransform = 'rotate('+degree+'deg)';
-      document.body.style.OTransform = 'rotate('+degree+'deg)';
+      rotate(document.body, request.degree)
+      break;
+    }
+    case "setElementRotation": {
+      let degreeRotation = request.degree
+      const imgSrc = request.imgSrc.replace(location.origin, '');
+      const elements = document.querySelectorAll(`img[src="${imgSrc}"]`);
+      elements.forEach(element => {
+        if (degreeRotation) {
+          var str = element.style.transform;
+          var originalRotation = parseInt(str.replace(/[^\d.-]/g, ""));
+          if (!isNaN(originalRotation)) {
+             degreeRotation += originalRotation
+          }
+        }
+        rotate(element, degreeRotation)
+      })
     }
   }
+  return true;
 });
