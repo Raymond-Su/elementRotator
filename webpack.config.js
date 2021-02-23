@@ -13,7 +13,7 @@ const options = {
   entry: {
     popup: path.join(__dirname, "src", "js", "popup.js"),
     background: path.join(__dirname, "src", "js", "background.js"),
-    contentScript: "./src/js/contentScript.js"
+    contentScript: path.join(__dirname, "src", "js", "contentScript.js"),
   },
   output: {
     path: path.join(__dirname, "build"),
