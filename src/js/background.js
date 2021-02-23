@@ -1,1 +1,3 @@
-console.log("Background Page Loaded")
+chrome.runtime.onInstalled.addListener(async () => {
+  console.log("Background page loaded");
+});
