@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rotation Tool</title>
-    <link rel="stylesheet" href="css/popup.css" />
+    <title>pageRotate</title>
   </head>
   <body>
-    <div class="container full-pad">
+    <div class="container">
       <div class="row">
-        <div class="col-xs-12">
-          <h3>pageRotate</h3>
+        <h3>pageRotate</h3>
+        <input id="degree-range" type="range" value="0" min="-180" max="180" />
+        <div class='container-inline-row' >
+          <div class="div-degree-title">
+            <label for="degree-number">Rotation degree:</label>
+          </div>
+          <div class="div-degree-display fullWidth" >
+            <input class="input-number" id="degree-number" type="number" value="0" min="-180" max="180" />
+          </div>
         </div>
-        <div class="col-xs-12">
-          <input id="degree-range" type="range" value="0" min="-180" max="180" />
+        <div class='container-inline-row margin-small flex-gap' >
+           <button class="fullWidth btn-degree" id="rotate-left-button">&#10226</button>
+           <button class="fullWidth btn-degree" id="rotate-right-button">&#10227</button>
         </div>
-        <div class="col-xs-4 only-left-pad">
-          <label for="degree-number">Rotation degree:</label>
-        </div>
-        <div class="col-xs-4 no-pad">
-          <input class="input-number" id="degree-number" type="number" value="0" min="-180" max="180" />
-        </div>
-        <div class="col-xs-4 only-right-pad">
-          <button class="input-button" id="reset-button">Reset</button>
+        <div class="margin-small">
+          <button class="fullWidth btn-degree" id="reset-button">Reset</button>
         </div>
       </div>
     </div>

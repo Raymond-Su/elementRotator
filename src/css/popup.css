@@ -1,3 +1,8 @@
+html,
+body {
+  min-width:200px;
+}
+
 h1,
 h2,
 h3,
@@ -6,16 +11,38 @@ h5,
 h6 {
   margin-top: 0;
 }
-html,
-body {
-  width: 400px;
+
+.fullWidth {
+  width:100%
 }
-.full-pad {
-  padding: 15px;
+
+.margin-small {
+  margin-top: 10px
 }
-.input-button {
+
+.row {
+  margin: 15px;
+}
+
+
+#degree-range {
   width: 100%;
 }
+
+.container-inline-row {
+  display: flex;
+}
+
+.div-degree-title {
+  width:fit-content;
+  white-space: nowrap;
+  padding: 5px;
+}
+
+.div-degree-display {
+  text-align: end;
+}
+
 .input-number {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -25,29 +52,28 @@ body {
   box-shadow: none;
   border: none;
   background-color: #eee;
-  padding-left: 2px;
+  padding: 5px;
+  text-align: end;
+  border-radius: 5px;
+  width: fit-content;
 }
+
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .input-number:focus {
   outline: none;
 }
-.no-pad {
-  padding: 0;
+
+
+.btn-degree {
+  border-radius: 5px;
+  padding:5px
 }
-.only-top-pad {
-  padding: 15px 0 0 0;
-}
-.only-right-pad {
-  padding: 0 15px 0 0;
-}
-.only-bottom-pad {
-  padding: 0 0 15px 0;
-}
-.only-left-pad {
-  padding: 0 0 0 15px;
-}
-.row {
-  margin-bottom: 15px;
-}
-#degree-range {
-  width: 100%;
+
+.flex-gap *:not(:last-child) {
+  margin-right: 10px;
 }

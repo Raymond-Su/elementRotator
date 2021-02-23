@@ -20,5 +20,4 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       document.body.style.OTransform = 'rotate('+degree+'deg)';
     }
   }
-  return true
 });
