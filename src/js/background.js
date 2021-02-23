@@ -1,1 +1,1 @@
-import "../img/icon-128.png";
+console.log("Background Page Loaded")

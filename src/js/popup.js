@@ -17,16 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Helper functions
   function rotateElement(degree) {
-    chrome.tabs.executeScript(
-      null,
-      {
-        code: "var degree = " + degree + ";",
-      },
-      function () {
-        chrome.tabs.executeScript(null, { file: "contentScript.bundle.js" });
-      }
-    );
-  }
+    chrome.tabs.getSelected(null, function (tab) {
+      chrome.tabs.sendRequest(tab.id, { action: "setRotation", degree });
+      // chrome.tabs.executeScript(
+      //   null,
+      //   {
+      //     code: "var degree = " + degree + ";",
+      //   },
+      //   function () {
+      //     chrome.tabs.executeScript(null, { file: "contentScript.bundle.js" });
+      //   }
+      // );
+    }
+    )}
 
 
   function verifyRange(degree) {
