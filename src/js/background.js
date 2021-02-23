@@ -4,13 +4,13 @@ chrome.runtime.onInstalled.addListener(async () => {
 
 const contextMenuContents = [{
   id: "rotateRight",
-  title: "Rotate clockwise"
+  title: "Rotate clockwise by 90 degrees"
 }, {
   id: "rotateLeft",
-  title: "Rotate anti-clockwise"
+  title: "Rotate anti-clockwise by 90 degrees"
 }, {
   id: "rotateReset", 
-  title: "Reset"
+  title: "Original rotation"
 }]
 
 
