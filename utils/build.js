@@ -4,7 +4,7 @@ const webpack = require("webpack"),
 let config = require("../webpack.config");
 
 console.log("cleaning build folder")
-fs.emptyDirSync('../build')
+fs.emptyDirSync('build')
 
 config.plugins = [
   // clean the build folder

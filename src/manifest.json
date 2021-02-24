@@ -1,18 +1,19 @@
 {
-  "name": "pageRotate",
-  "description": "A chrome extension that rotates the current page",
+  "name": "Element Rotator",
+  "description": "A chrome extension that rotates elements",
   "version": "0.0.1",
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "contextMenus"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "32": "icon-34.png"
+      "32": "icon-32.png"
     }
   },
   "icons": {
+    "16": "icon-16.png",
     "128": "icon-128.png"
   },
   "manifest_version": 3,

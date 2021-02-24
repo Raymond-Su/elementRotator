@@ -81,16 +81,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   rotateLeftButton.addEventListener("click", function () {
-    let degree = Math.max(parseInt(degreeNumber.value, 10) - 90, -180)
-    degreeRange.value = degree ;
-    degreeNumber.value = degree;
-    rotateElement(degree);
+    const newDegree = Math.max(parseInt(degreeNumber.value, 10) - 90, -180)
+    degreeRange.value = newDegree ;
+    degreeNumber.value = newDegree;
+    rotateElement(newDegree);
   });
 
   rotateRightButton.addEventListener("click", function () {
-    let degree = Math.min(parseInt(degreeNumber.value, 10) + 90, 180)
-    degreeRange.value = degree;
-    degreeNumber.value = degree;
-    rotateElement(degree);
+    const newDegree = Math.min(parseInt(degreeNumber.value, 10) + 90, 180)
+    degreeRange.value = newDegree;
+    degreeNumber.value = newDegree;
+    rotateElement(newDegree);
   });
 });
