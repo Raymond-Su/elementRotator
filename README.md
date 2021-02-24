@@ -4,7 +4,7 @@
 
 <h1 align="center">Element Rotator</h1>
 
-*Element Rotator is a web browser extension that rotates elements on a webpage.*
+<p align="center">*Element Rotator is a web browser extension that rotates elements on a webpage.*</p>
 
 ### Installation Instructions
 **Google Chrome / Microsoft Edge** (Custom sites supported)
