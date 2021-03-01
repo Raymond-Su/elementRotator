@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rotate the page</title>
+  <script defer src="popup.js"></script></head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h3>Rotate the page</h3>
+        <input id="degree-range" type="range" value="0" min="-180" max="180" />
+        <div class='container-inline-row' >
+          <div class="div-degree-title">
+            <label for="degree-number">Rotation degree:</label>
+          </div>
+          <div class="div-degree-display fullWidth" >
+            <input class="input-number" id="degree-number" type="number" value="0" min="-180" max="180" />
+          </div>
+        </div>
+        <div class='container-inline-row margin-small flex-gap' >
+           <button class="fullWidth btn-degree" id="rotate-left-button">&#10226</button>
+           <button class="fullWidth btn-degree" id="rotate-right-button">&#10227</button>
+        </div>
+        <div class="margin-small">
+          <button class="fullWidth btn-degree" id="reset-button">Reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
